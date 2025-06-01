@@ -1,10 +1,136 @@
-npm create vite@latest casino-asiatico -- --template react
-cd casino-asiatico
-npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cassino Asiático</title>
+  <!-- Fonte Asiática -->
+  <link href="<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet" />
+" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #8B0000; /* vermelho escuro */
+      color: #FFD700; /* dourado */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    footer {
+      border-top: 2px solid #FFD700;
+      border-bottom: none;
+      font-size: 0.9rem;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: text-decoration 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    main h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    main p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    main button {
+      background-color: #FFD700;
+      color: #8B0000;
+      font-weight: 700;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: filter 0.3s;
+    }
+
+    main button:hover {
+      filter: brightness(0.9);
+    }
+
+    @media (max-width: 600px) {
+      main h1 {
+        font-size: 2.2rem;
+      }
+      main p {
+        font-size: 1.1rem;
+      }
+      nav ul {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-size: 1.8rem; font-weight: 900;">Cassino Asiático</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Jogos</a></li>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Minha Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bem-vindo ao Cassino Asiático</h1>
+    <p>Explore os melhores jogos de bacará, roleta, pôquer e muito mais com um toque asiático autêntico. Aproveite bônus diários, torneios exclusivos e pagamentos rápidos em criptomoedas.</p>
+    <button onclick="alert('Vamos começar a jogar!')">Começar a Jogar</button>
+  </main>
+
+  <footer>
+    © 2025 Cassino Asiático - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
 
 
